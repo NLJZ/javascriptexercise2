@@ -16,11 +16,22 @@ const magicSquare = arr => {
   let diag1 = arr[0] + arr[4] + arr[8];
   let diag2 = arr[2] + arr[4] + arr[6];
   let addedArr = [row1, row2, row3, col1, col2, col2, diag1, diag2];
-  const counter = 0;
-  addedArr.forEach(val => (val == 15 ? counter++ : console.log("oops")));
+  let result;
+  for (let i = 0; i < addedArr.length; i++) {
+    if (addedArr[i] !== 15) {
+      result = false;
+      break;
+    } else {
+      result = true;
+    }
+  }
+  console.log(result);
 };
 
 magicSquare([8, 1, 6, 3, 5, 7, 4, 9, 2]);
+magicSquare([2, 7, 6, 9, 5, 1, 4, 3, 8]);
+magicSquare([3, 5, 7, 8, 1, 6, 4, 9, 2]);
+magicSquare([8, 1, 6, 7, 5, 3, 4, 9, 2]);
 
 // #### Examples:
 // [8, 1, 6, 3, 5, 7, 4, 9, 2] -> true
