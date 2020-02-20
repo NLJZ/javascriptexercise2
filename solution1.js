@@ -16,7 +16,8 @@ const magicSquare = arr => {
   let diag1 = arr[0] + arr[4] + arr[8];
   let diag2 = arr[2] + arr[4] + arr[6];
   let addedArr = [row1, row2, row3, col1, col2, col2, diag1, diag2];
-  addedArr.forEach(val => (val == 15 ? (counter = counter++) : counter--));
+  const counter = 0;
+  addedArr.forEach(val => (val == 15 ? counter++ : console.log("oops")));
 };
 
 magicSquare([8, 1, 6, 3, 5, 7, 4, 9, 2]);
